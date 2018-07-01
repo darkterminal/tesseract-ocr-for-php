@@ -14,7 +14,7 @@ class ReadmeExamples extends TestCase
 		$actual = (new TesseractOCR("{$this->imagesDir}/text.png"))
 			->executable($this->executable)
 			->run();
-		$this->assertEquals($expected, $actual);
+		$this->assertEquals($expected, urlencode($actual));
 	}
 
 	public function testOtherLanguages()
